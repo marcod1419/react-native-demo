@@ -5,10 +5,10 @@
 1. **Install dependencies**: `npm install` or `yarn install`
 2. **iOS setup** (Mac only):
    - `cd ios && pod install && cd ..`
-3. **Run Metro bundler**: `npx react-native start`
+3. **Run Metro bundler**: `npx react-native start` or `npm start`
 4. **Start app**:
-   - iOS: `npx react-native run-ios`
-   - Android: `npx react-native run-android`
+   - iOS: `npx react-native run-ios` or `npm run ios`
+   - Android: `npx react-native run-android` or `npm run android`
 
 ## Overview
 
@@ -21,12 +21,14 @@ This is a React Native + TypeScript application that displays a grid of products
 - **Cart screen** with item removal and quantity management
 - **React Context** for cart state
 - **Types** for all navigation routes and product data
-- Basic **Jest** tests for cart logic
+- Basic **Jest** tests for cart logic with **React Testing Library** for rendering
 
 ### Architecture Choices
 
-- **Context-based cart** keeps logic centralized.
+- **Context-based cart** keeps logic centralized. Due to the simplicity of the
+  app, React's Context API is sufficient for managing global state.
 - **React Navigation** organizes screens (bottom tabs for “Collection” and “Cart”, with a stack for “ProductList” and “ProductDetails”).
 - **TypeScript** ensures type safety.
+- **Avoids Third-Party Libraries Where Possible** to keep the demonstration simple and lightweight.
 
-Enjoy!
+Enjoy, and thank you for checking it out!

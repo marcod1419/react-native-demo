@@ -8,6 +8,9 @@ import CartScreen from '../screens/CartScreen'
 
 const Tab = createBottomTabNavigator<BottomTabParamList>()
 
+const ShoppingBagIcon = () => <Text>🛍️</Text>
+const CartIcon = () => <Text>🛒</Text>
+
 const BottomTabsNavigator = () => {
   const {state} = useCart()
   const cartCount = state.items.reduce((acc, item) => acc + item.quantity, 0)
@@ -20,7 +23,7 @@ const BottomTabsNavigator = () => {
         options={{
           title: 'All Products',
           headerShown: false,
-          tabBarIcon: () => <Text>🛍️</Text>,
+          tabBarIcon: ShoppingBagIcon,
         }}
       />
       <Tab.Screen
@@ -29,7 +32,7 @@ const BottomTabsNavigator = () => {
         options={{
           title: 'Cart',
           tabBarBadge: cartCount || undefined,
-          tabBarIcon: () => <Text>🛒</Text>,
+          tabBarIcon: CartIcon,
         }}
       />
     </Tab.Navigator>

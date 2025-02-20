@@ -10,6 +10,11 @@
    - iOS: `npx react-native run-ios` or `npm run ios`
    - Android: `npx react-native run-android` or `npm run android`
 
+## How to Test
+
+Tests currently live in the `__tests__` directory. For the sake of this
+assignment, we are focusing on testing the cart logic. To run the tests, use `npm test` or `yarn test`.
+
 ## Overview
 
 This is a React Native + TypeScript application that displays a grid of products, allows viewing product details (with variant selection), and manages a cart using React Context. Navigation is handled via React Navigation (bottom tabs + native stack).
